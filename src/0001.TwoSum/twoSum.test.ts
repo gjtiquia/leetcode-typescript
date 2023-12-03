@@ -1,6 +1,6 @@
-import { twoSum } from "./twoSum";
 import * as path from "path";
 import { parseForTestCasesAsync } from "../Utility";
+import { twoSum } from "./twoSum";
 
 describe("Two Sum Tests", () => {
     let testCases: any[];

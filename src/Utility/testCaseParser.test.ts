@@ -17,9 +17,9 @@ describe("Test Case Parser Tests", () => {
         expect(cases).toEqual(expectedCases);
     })
 
-    it("should parse the first line from two sum correctly", async () => {
-        const lines = await readLinesAsync("twoSum.md");
-        expect(lines[0]).toEqual("# 1. Two Sum")
+    it("should parse the first line from dummy correctly", async () => {
+        const lines = await readLinesAsync("dummyProblem.md");
+        expect(lines[0]).toEqual("# 99: Dummy Problem")
     })
 })
 

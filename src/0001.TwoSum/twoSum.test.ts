@@ -1,14 +1,25 @@
 import { twoSum } from "./twoSum";
+import * as path from "path";
+import { parseForTestCasesAsync } from "../Utility";
 
 describe("Two Sum Tests", () => {
+    let testCases: any[];
 
-    const cases = [
-        [[2, 7, 11, 15], 9, [0, 1]],
-        [[3, 2, 4], 6, [1, 2]],
-        [[3, 3], 6, [0, 1]],
-    ];
+    beforeAll(async () => {
+        const fileName = "README.md";
+        const filePath = path.join(__dirname, "./", fileName);
 
-    it.each(cases)("nums %p and target %p should give %p", (nums, target, expectedResult) => {
-        expect(twoSum(nums as number[], target as number)).toEqual(expectedResult);
+        testCases = await parseForTestCasesAsync(filePath);
+    })
+
+    it("should pass all test cases", () => {
+        expect(testCases.length).toBeGreaterThan(0);
+
+        testCases.forEach(({ nums, target, expectedResult }) => {
+
+            const result = twoSum(nums as number[], target as number);
+
+            expect(result).toEqual(expectedResult);
+        })
     })
 })

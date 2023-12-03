@@ -1,8 +1,8 @@
 # LeetCode - TypeScript
 
-A minimal template for setting up a TypeScript project with unit tests with [ts-jest](https://kulshekhar.github.io/ts-jest/) and bundling with [tsup](https://tsup.egoist.dev/).
+LeetCode solutions with TypeScript.
 
-## Commands
+## Terminal Commands
 
 Install required packages
 
@@ -10,7 +10,7 @@ Install required packages
 npm install
 ```
 
-Run the tests
+Run all tests
 
 ```bash
 npm test
